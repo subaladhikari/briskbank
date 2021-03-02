@@ -1,0 +1,499 @@
+/* Google fonts import */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+/* Config varaibles */
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --text-color: #444;
+  --gradient-primary: linear-gradient(to top right, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #f0e330, #ebe26c);
+  --gradient-tertiary: linear-gradient(to top right, #ff3929, #ff7166);
+  --gradient-quaternary: linear-gradient(to top left, #4137ff, #7871ff);
+}
+
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  background-color: #f3f3f3;
+  overflow: hidden;
+  background-image: url(../media/hero-bg.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90vh auto;
+}
+
+h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+/* Helper classes */
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: auto;
+  padding: 0 40px;
+}
+
+.scrollbar {
+  overflow: hidden;
+}
+
+.text-center {
+  text-align: center;
+}
+/* JS helper class */
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  font-size: 1.7rem;
+  font-family: inherit;
+  font-weight: 600;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--color-primary-darker);
+}
+
+.btn:focus {
+  outline: none;
+}
+/* General */
+
+/* Navbar */
+.navbar {
+  height: 70px;
+}
+
+.navbar .flex {
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+}
+
+.navbar li {
+  padding: 10px 20px;
+}
+
+.welcome {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.login {
+  display: flex;
+}
+
+.login__input {
+  border: none;
+  padding: 0.5rem 2rem;
+  font-size: 1.6rem;
+  font-family: inherit;
+  text-align: center;
+  width: 12rem;
+  border-radius: 10rem;
+  margin-right: 1rem;
+  color: inherit;
+  border: 1px solid #fff;
+  transition: all 0.3s;
+}
+
+.login__input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+
+.login__input::placeholder {
+  color: #bbb;
+}
+
+.login__btn {
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.login__btn:hover,
+.login__btn:focus,
+.btn--sort:hover,
+.btn--sort:focus {
+  outline: none;
+  color: #777;
+}
+/* Navbar */
+
+/* Main body */
+.app--container {
+  position: relative;
+  max-width: 100rem;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-template-rows: auto repeat(3, 15rem) auto;
+  gap: 1rem;
+  opacity: 0;
+  transition: all 1s;
+}
+
+/* Balance */
+.balance {
+  grid-column: 1 / span 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.balance__label {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: -0.2rem;
+}
+
+.balance__date {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.balance__value {
+  font-size: 4.5rem;
+  font-weight: 400;
+}
+
+/* transactions */
+.transactions {
+  grid-row: 2 / span 3;
+  background-color: #fff;
+  border-radius: 1rem;
+  overflow: scroll;
+  overflow-x: visible;
+  height: 100%;
+}
+
+.transactions__row {
+  padding: 2.25rem 4rem;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+
+.transactions__type {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  padding: 0.1rem 1rem;
+  border-radius: 10rem;
+  margin-right: 2rem;
+}
+
+.transactions__date {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #666;
+}
+
+.transactions__type--deposit {
+  background-image: var(--gradient-primary);
+}
+
+.transactions__type--withdrawal {
+  background-image: var(--gradient-tertiary);
+}
+
+.transactions__value {
+  font-size: 1.7rem;
+  margin-left: auto;
+}
+/* transactions */
+
+/* total */
+.total {
+  grid-row: 5 / 6;
+  display: flex;
+  align-items: baseline;
+  padding: 0 0.2rem;
+  margin-top: 1rem;
+}
+
+.total__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-right: 0.5rem;
+}
+
+.total__value {
+  font-size: 1.75rem;
+  margin-right: 1.5rem;
+}
+
+.total__value--in,
+.total__value--interest {
+  color: var(--color-primary);
+}
+
+.total__value--out {
+  color: var(--color-tertiary);
+}
+
+.btn--sort {
+  margin-left: auto;
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+/* total */
+
+/* Operations */
+.operation {
+  border-radius: 1rem;
+  padding: 3rem 4rem;
+  color: var(--text-color);
+}
+
+.operation--transfer {
+  background-image: var(--gradient-secondary);
+}
+
+.operation--loan {
+  background-image: var(--gradient-quaternary);
+}
+
+.operation--close {
+  background-image: var(--gradient-tertiary);
+}
+/* Operations */
+
+/* Form */
+.form {
+  display: grid;
+  grid-template-columns: 2.5fr 2.5fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.4rem 1rem;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.4);
+  font-family: inherit;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #333;
+  padding: 0.3rem 1rem;
+  border-radius: 0.7rem;
+  transition: all 0.3s;
+}
+
+.form__input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form__label {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.form__btn {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1.8rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.form__btn:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+/* Form */
+
+/* Auto timer */
+.timer {
+  font-weight: 600;
+}
+
+.logout-timer {
+  padding: 0 0.3rem;
+  margin-top: 1.9rem;
+  text-align: right;
+  font-size: 1.25rem;
+}
+/* Auto timer */
+
+/* Footer */
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #444;
+  color: #fff;
+  height: 100px;
+}
+
+footer p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+/* Footer */
+
+/* Help message */
+#toasts {
+  position: fixed;
+  bottom: 100px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.toast {
+  background-color: var(--color-primary);
+  color: #eee;
+  border-radius: 10px;
+  padding: 1rem 2rem;
+  margin: 1rem;
+  font-size: 20px;
+}
+/* Help message */
+
+/* Tablet Media */
+@media (max-width: 850px) {
+  body {
+    background-size: contain;
+  }
+
+  .navbar {
+    height: 110px;
+  }
+
+  .navbar .flex {
+    flex-direction: column;
+  }
+
+  .welcome {
+    font-size: 1.5rem;
+  }
+
+  .app--container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .balance__value {
+    font-size: 3rem;
+  }
+
+  .transactions {
+    order: 2;
+    overflow: visible;
+  }
+
+  .total {
+    margin-bottom: 1rem;
+    order: 1;
+  }
+
+  .total__value {
+    margin-right: 1.5rem;
+  }
+
+  .operation {
+    margin-bottom: 1rem;
+  }
+
+  .logout-timer {
+    text-align: center;
+    order: 3;
+  }
+
+  .btn--logout {
+    width: 100%;
+  }
+
+  footer p {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  footer .help-btn {
+    font-size: 1.5rem;
+    padding: 1rem 3.5rem;
+  }
+}
+/* Tablet Media */
+
+/* Mobile Media */
+@media (max-width: 650px) {
+  .navbar {
+    height: 150px;
+  }
+  .navbar ul {
+    flex-direction: column;
+  }
+
+  .total__value {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+}
+/* Mobile Media */

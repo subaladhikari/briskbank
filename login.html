@@ -1,0 +1,245 @@
+<!-- Login page is more about JS functionality than UI/UX. Bootstrap built version will be available soon. I used custom properties because it gives me flexibility in JS. -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Title and icons -->
+    <link rel="shortcut icon" type="image/png" href="./media/icon.png" />
+    <title>Brisk Bank | Members</title>
+
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/loginstyle.css" />
+
+    <!-- Custom JS -->
+    <script defer src="./js/loginscript.js"></script>
+  </head>
+  <body>
+    <!-- Navbar-->
+    <div class="navbar">
+      <div class="container flex">
+        <img src="./media/logo.png" alt="Logo" class="logo" />
+        <nav>
+          <ul>
+            <li><p class="welcome">Login to your account</p></li>
+            <li class="login--item">
+              <form class="login">
+                <input
+                  type="text"
+                  placeholder="USER"
+                  class="login__input login__input--user"
+                />
+                <input
+                  type="password"
+                  placeholder="PIN"
+                  maxlength="4"
+                  class="login__input login__input--pin"
+                />
+                <button class="login__btn">
+                  <i class="fas fa-sign-in-alt"></i>
+                </button>
+              </form>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <!-- Navbar-->
+
+    <!-- Main body -->
+    <main class="app--container">
+      <!-- balance -->
+      <div class="balance">
+        <div>
+          <p class="balance__label">Current balance</p>
+          <p class="balance__date">
+            <script>
+              document.write(new Date().toLocaleDateString());
+            </script>
+          </p>
+        </div>
+        <p class="balance__value">0000$</p>
+      </div>
+      <!-- balance -->
+
+      <!-- transactions-->
+      <div class="transactions">
+        <div class="transactions__row">
+          <div class="transactions__type transactions__type--deposit">
+            deposit
+          </div>
+          <div class="transactions__date">02/01/2021</div>
+          <div class="transactions__value">1000$</div>
+        </div>
+        <div class="transactions__row">
+          <div class="transactions__type transactions__type--withdrawal">
+            withdrawal
+          </div>
+          <div class="transactions__date">02/01/2021</div>
+          <div class="transactions__value">-500$</div>
+        </div>
+      </div>
+      <!-- transactions-->
+
+      <!-- total -->
+      <div class="total">
+        <p class="total__label">Deposit</p>
+        <p class="total__value total__value--in">0000$</p>
+        <p class="total__label">Withdrawal</p>
+        <p class="total__value total__value--out">0000$</p>
+        <p class="total__label">Interest</p>
+        <p class="total__value total__value--interest">0000$</p>
+        <button class="btn--sort"><i class="fas fa-sort"></i> SORT</button>
+      </div>
+      <!-- total -->
+
+      <!-- transfer -->
+      <div class="operation operation--transfer">
+        <h2 class="text-center">Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form__input form__input--to" />
+          <input type="number" class="form__input form__input--amount" />
+          <button class="form__btn form__btn--transfer">&#187;</button>
+          <label class="form__label">Transfer</label>
+          <label class="form__label">Amount</label>
+        </form>
+      </div>
+      <!-- transfer -->
+
+      <!-- loan -->
+      <div class="operation operation--loan">
+        <h2 class="text-center">Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form__input form__input--loan-amount" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__inputloan--pin"
+          />
+          <button class="form__btn form__btn--loan">&#171;</button>
+          <label class="form__label form__label--loan">Amount</label>
+          <label class="form__label">PIN</label>
+        </form>
+      </div>
+      <!-- loan -->
+
+      <!-- close -->
+      <div class="operation operation--close">
+        <h2 class="text-center">Close account</h2>
+        <form class="form form--close">
+          <input type="text" class="form__input form__input--user" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form__input form__input--pin"
+          />
+          <button class="form__btn form__btn--close">&#33;</button>
+          <label class="form__label">Confirm user</label>
+          <label class="form__label">Confirm PIN</label>
+        </form>
+      </div>
+      <!-- close -->
+
+      <!-- logout timer -->
+      <button class="btn btn--logout hidden">Logout</button>
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">15:00</span>
+      </p>
+      <!-- logout timer -->
+    </main>
+    <!-- Main body -->
+
+    <!-- Toast message -->
+    <div id="toasts"></div>
+    <!-- Toast message -->
+
+    <!-- Footer -->
+    <footer>
+      <img
+        src="./media/footer-icon.png"
+        alt="Logo"
+        class="footer__logo"
+        width="50px"
+      />
+      <p class="footer__copyright">
+        Country & Jurisdictions: United States<br />
+        &copy; 2021 Brisk Bank.
+      </p>
+      <button class="btn help-btn" id="button">Help</button>
+    </footer>
+    <!-- Footer -->
+
+    <!-- GSAP JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- This belongs in seperate JS file. Additional features being implemented. I kept this here to help with the modifications. -->
+    <script>
+      // GSAP ANIMATIONS
+      TweenMax.from(".logo", 0.2, {
+        delay: 0.75,
+        opacity: 0,
+        y: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".welcome", 0.2, {
+        delay: 0.85,
+        opacity: 0,
+        y: -15,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".login", 0.2, {
+        delay: 0.95,
+        opacity: 0,
+        y: -15,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from("footer", 0.2, {
+        delay: 0.55,
+        opacity: 0,
+        y: 30,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".footer__logo", 0.2, {
+        delay: 0.75,
+        opacity: 0,
+        y: 20,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".footer__copyright", 0.2, {
+        delay: 0.85,
+        opacity: 0,
+        y: -20,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".help-btn", 0.2, {
+        delay: 0.95,
+        opacity: 0,
+        y: 10,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+    </script>
+  </body>
+</html>

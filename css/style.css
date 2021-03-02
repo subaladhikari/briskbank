@@ -1,0 +1,104 @@
+/* Google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap");
+
+/* General */
+:root {
+  --bgcolor-footer: #37383d;
+}
+
+html,
+body {
+  height: 100%;
+  font-size: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar .nav-link {
+  font-weight: 600;
+  font-size: 18px;
+}
+
+/* Color background */
+.gradient {
+  background: rgb(153, 195, 151);
+  background: radial-gradient(
+    circle,
+    rgba(153, 195, 151, 1) 10%,
+    rgba(67, 158, 65, 0.969625350140056) 100%
+  );
+}
+
+/* Hero */
+.page-header {
+  margin-top: 5rem;
+  font-size: 1.25rem;
+  color: #fff;
+}
+
+/* Services */
+.service-icon {
+  color: #fff;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Features */
+.features {
+  color: #fff;
+}
+
+.features ul {
+  padding-left: 0rem;
+  list-style-type: none;
+}
+
+.features ul li {
+  padding-left: 2rem;
+  background-image: url(../media/check.svg);
+  background-repeat: no-repeat;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+}
+/* Features */
+
+/* Contact */
+.contact {
+  color: #fff !important;
+}
+
+/* Footer */
+footer {
+  background-color: var(--bgcolor-footer) !important;
+  color: #eee !important;
+}
+
+footer .col-md-2 {
+  cursor: pointer;
+}
+
+footer p {
+  font-size: 0.9rem;
+}
+/* Footer */
+
+/* Responsive */
+@media (max-width: 768px) {
+  .img-company {
+    width: 25%;
+  }
+
+  footer .col-md-2 {
+    margin: 0.5rem 0;
+  }
+}
+/* Responsive */

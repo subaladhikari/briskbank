@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./media/icon.png" />
+    <title>Brisk Bank | Banking Done Right</title>
+
+    <!-- Bootstrap and custom css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"
+          ><img src="./media/logo.png" alt="" width="160" height="50"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#services">Services</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <a
+            class="btn btn-outline-success nav-btn"
+            href="login.html"
+            role="button"
+            >Member</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!-- Header -->
+    <header class="page-header gradient">
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-5 content">
+            <h1>Banking Done Right.</h1>
+            <p>Spend, Waste, or Invest.</p>
+            <a
+              class="btn btn-outline-success"
+              style="color: #fff"
+              href="login.html"
+              role="button"
+              >Get Started</a
+            >
+          </div>
+          <div class="col-md-5 image">
+            <img src="./media/hero-bg.svg" alt="Hero image" class="img-fluid" />
+            <div id="services"></div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Services -->
+    <section class="services">
+      <div class="container py-5">
+        <div class="row text-center">
+          <div class="col-md-4">
+            <div class="service-icon gradient mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-credit-card"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v1h14V4a1 1 0 0 0-1-1H2zm13 4H1v5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V7z"
+                />
+                <path
+                  d="M2 10a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1v-1z"
+                />
+              </svg>
+            </div>
+            <h2>Digital Transactions</h2>
+            <p>Move money with your fingertips.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="service-icon gradient mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-cash"
+                viewBox="0 0 16 16"
+              >
+                <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" />
+                <path
+                  d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2H3z"
+                />
+              </svg>
+            </div>
+            <h2>Online Account</h2>
+            <p>Watch your finance right from your phone.</p>
+          </div>
+          <div class="col-md-4">
+            <div class="service-icon gradient mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-x-octagon-fill"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zm-6.106 4.5L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708z"
+                />
+              </svg>
+            </div>
+            <h2>Immediate Operations</h2>
+            <p>Instant service upon request.</p>
+          </div>
+          <div id="features"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Services -->
+
+    <!-- Features -->
+    <section class="features gradient">
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-5">
+            <h1 class="my-3">Features</h1>
+            <p class="my-2">Everything you need in a modern bank and more.</p>
+            <ul>
+              <li>100% digital bank</li>
+              <li>Watch your money grow</li>
+              <li>Free debit card included</li>
+            </ul>
+          </div>
+          <div class="col-md-5">
+            <img
+              src="./media/features-bg.svg"
+              alt="Hero image"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Features -->
+
+    <!-- Companies -->
+    <section class="companies mt-5" id="companies">
+      <div class="container text-center py-5">
+        <div class="row g-5 justify-content-center">
+          <div class="col-md-2">
+            <img
+              src="./media/companies/1.png"
+              alt=""
+              class="img-fluid img-company"
+            />
+          </div>
+          <div class="col-md-2">
+            <img
+              src="./media/companies/2.png"
+              alt=""
+              class="img-fluid img-company"
+            />
+          </div>
+          <div class="col-md-2">
+            <img
+              src="./media/companies/3.png"
+              alt=""
+              class="img-fluid img-company"
+            />
+          </div>
+          <div class="col-md-2">
+            <img
+              src="./media/companies/4.png"
+              alt=""
+              class="img-fluid img-company"
+            />
+          </div>
+          <div class="col-md-2">
+            <img
+              src="./media/companies/5.png"
+              alt=""
+              class="img-fluid img-company"
+            />
+          </div>
+          <div id="contact"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Companies -->
+
+    <!-- Contact -->
+    <section class="contact gradient">
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-5">
+            <h2>Contact Us</h2>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Email address</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label"
+                >Message</label
+              >
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                rows="5"
+              ></textarea>
+            </div>
+            <button
+              type="button"
+              class="btn btn-outline-success"
+              style="color: #fff"
+            >
+              Send
+            </button>
+          </div>
+          <div class="col-md-5">
+            <img src="./media/contact-bg.svg" alt="" class="img-fluid" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="container py-5">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-2">About Us</div>
+          <div class="col-md-2">Security Center</div>
+          <div class="col-md-2">Terms of Use</div>
+          <div class="col-md-2">Privacy Policy</div>
+          <div class="col-md-2">Careers</div>
+          <div class="col-md-2">Contact Us</div>
+        </div>
+      </div>
+      <div class="container-fluid text-center">
+        <img
+          src="./media/footer-icon.png"
+          alt=""
+          class="img-fluid"
+          width="50px"
+        />
+      </div>
+      <div class="container-fluid text-center py-3">
+        <p>
+          Country & Jurisdictions: United States <br />&copy; 2021 Brisk Bank.
+        </p>
+      </div>
+    </footer>
+    <!-- Footer -->
+
+    <!-- GSAP JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"
+      integrity="sha512-1dalHDkG9EtcOmCnoCjiwQ/HEB5SDNqw8d4G2MKoNwjiwMNeBAkudsBCmSlMnXdsH8Bm0mOd3tl/6nL5y0bMaQ=="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+
+    <!-- Normally I would use a different file for this but I still need to add more functionality and have to disable gsap while developing. -->
+    <script>
+      // GSAP ANIMATIONS
+      TweenMax.from(".navbar-brand", 0.2, {
+        delay: 0.75,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".navbar-nav", 0.2, {
+        delay: 0.85,
+        opacity: 0,
+        y: -20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".nav-btn", 0.2, {
+        delay: 0.95,
+        opacity: 0,
+        y: 20,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".page-header .content", 0.2, {
+        delay: 1,
+        opacity: 0,
+        x: 20,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".page-header .image", 0.2, {
+        delay: 1.2,
+        opacity: 0,
+        x: -20,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".services .col-md-4", 0.2, {
+        delay: 1.3,
+        opacity: 0,
+        y: 20,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+
+      TweenMax.from(".features .col-md-5", 0.2, {
+        delay: 1.4,
+        opacity: 0,
+        y: -20,
+        rotation: 90,
+        ease: Expo.easeInOut,
+      });
+
+      // Function to collapse mobile nav on item click. Bootstrap is not working for some reason.
+      const navBtn = document.querySelector(".navbar-toggler");
+      document.querySelectorAll(".nav-link").forEach(function (el) {
+        el.addEventListener("click", () => {
+          if (navBtn.getAttribute("aria-expanded") === "true") navBtn.click();
+        });
+      });
+    </script>
+  </body>
+</html>
